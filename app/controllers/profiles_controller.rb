@@ -10,6 +10,8 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    redirect_to :root unless user_signed_in?
+    @profile = current_user.profile  
   end
 
   # GET /profiles/new
@@ -19,12 +21,15 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @profile = Profile.find_or_initialize_by(user: current_user)   
   end
 
   # POST /profiles
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
+    @profile.user = current_user
+
 
     respond_to do |format|
       if @profile.save
