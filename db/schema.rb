@@ -59,5 +59,8 @@ ActiveRecord::Schema.define(version: 2018_05_06_051901) do
   end
 
   add_foreign_key "products", "users"
+<<<<<<< HEAD
   add_foreign_key "profiles", "users"
+=======
+>>>>>>> product
 end
