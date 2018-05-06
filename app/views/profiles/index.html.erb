@@ -5,13 +5,17 @@
 <table>
   <thead>
     <tr>
+      <th>Image data</th>
       <th>User</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Username</th>
-      <th>User address</th>
+      <th>Street address</th>
+      <th>Suburb</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Postcode</th>
       <th>Short bio</th>
-      <th>Image data</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,16 +23,20 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
-        <td><%= profile.first_name %></td>
-        <td><%= profile.last_name %></td>
-        <td><%= profile.username %></td>
-        <td><%= profile.user_address %></td>
-        <td><%= profile.short_bio %></td>
         <% if profile.image_url.nil? %>
         <p> No image uploaded <p>
         <% else %>
         <td><%= image_tag profile.image_url %></td>
         <% end %>
+        <td><%= profile.first_name %></td>
+        <td><%= profile.last_name %></td>
+        <td><%= profile.username %></td>
+        <td><%= profile.street_address %></td>
+        <td><%= profile.suburb%></td>
+        <td><%= profile.city %></td>
+        <td><%= profile.state %></td> 
+        <td><%= profile.postcode %></td> 
+        <td><%= profile.short_bio %></td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>

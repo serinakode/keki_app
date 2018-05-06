@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Image:</strong>
+    <% if @profile.image_url.nil? %>
+    <p> No image uploaded </p>
+    <% else %>
+    <%= image_tag @profile.image_url, width:"50%" %>
+    <% end %>
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @profile.first_name %>
 </p>
@@ -16,22 +25,33 @@
 </p>
 
 <p>
-  <strong>User address:</strong>
-  <%= @profile.user_address %>
+  <strong>Street address:</strong>
+  <%= @profile.street_address %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @profile.town_suburb %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @profile.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @profile.state %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @profile.postcode %>
 </p>
 
 <p>
   <strong>Short bio:</strong>
   <%= @profile.short_bio %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-    <% if @profile.image_url.nil? %>
-    <p> No image uploaded </p>
-    <% else %>
-    <%= image_tag @profile.image_url, width:"50%" %>
-    <% end %>
 </p>
 
 
