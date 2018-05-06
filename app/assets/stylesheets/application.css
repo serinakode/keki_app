@@ -14,3 +14,132 @@
  *= require_self
  */
  
+
+ @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+{ 
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+html {
+    font-family: "Source Sans Pro"
+}
+
+.nav {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #6F6158;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+.label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    /* display: none; */
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #F3EEE9;
+        margin: 0;
+    }
+    #toggle:checked + .menu {
+        display: block;
+        position: relative;
+    }
+
+}
+
+.logo {
+    max-height: 650px;
+    max-width: 550px;
+    margin-top: 30px;
+    padding-left: 350px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.head {
+    font-family: 'Source Sans Pro';
+    font-size: 17pt;
+    text-align: center;
+    color:#6F6158;
+    margin-top: 60px;
+    position: relative;
+}
+
+.address {
+    font-family: 'Source Sans Pro';
+    font-size: 14pt;
+    text-align: center;
+    color:#6F6158;
+    margin-top: 90px;
+    position: relative;
+}
+
+.boxed {
+    border: 5px solid #F3EEE9;
+    width: 500px;
+    padding: 25px;
+    position: absolute;
+    /* margin-top: 300px; */
+    /* left:350px; */
+    margin: 70px 10px 60px 170px
+    position: relative;
+ }
+
+.cake {
+    width: 240px;
+    height: 350px;
+    object-fit: cover;
+    position: relative;
+    margin: 15px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-content: center;
+    /* position: relative; */
+    margin: 600px 30px 30px 20px 
+  }
