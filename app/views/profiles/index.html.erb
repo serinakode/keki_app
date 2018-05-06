@@ -24,7 +24,11 @@
         <td><%= profile.username %></td>
         <td><%= profile.user_address %></td>
         <td><%= profile.short_bio %></td>
-        <td><%= profile.image_data %></td>
+        <% if profile.image_url.nil? %>
+        <p> No image uploaded <p>
+        <% else %>
+        <td><%= image_tag profile.image_url %></td>
+        <% end %>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>

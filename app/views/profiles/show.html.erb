@@ -26,9 +26,14 @@
 </p>
 
 <p>
-  <strong>Image data:</strong>
-  <%= @profile.image_data %>
+  <strong>Image:</strong>
+    <% if @profile.image_url.nil? %>
+    <p> No image uploaded </p>
+    <% else %>
+    <%= image_tag @profile.image_url, width:"50%" %>
+    <% end %>
 </p>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

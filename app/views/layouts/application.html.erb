@@ -16,11 +16,12 @@
   <label for="toggle">&#9776;<label>
   <input type="checkbox" id="toggle"/>
   <div class="menu">
-    <%# SELL
-    MY ORDERS %>
+    
     <% if current_user != nil %>
     <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
     <%= link_to "PROFILE", profile_path(id: current_user) %>
+    <%= link_to "SELL", new_product_path %>
+    <%= link_to "MY ORDERS", products_path %>
     <% else %>
     <%= link_to "SIGN UP", new_user_registration_path %>
     <%= link_to "LOG IN", new_user_session_path %>
