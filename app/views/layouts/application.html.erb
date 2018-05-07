@@ -11,6 +11,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<div><%= link_to image_tag("Keki.png", class: "logo"), root_path %>
+
 <body>
 <div class="nav">
   <label for="toggle">&#9776;<label>
@@ -21,7 +23,7 @@
     <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
     <%= link_to "PROFILE", profile_path(id: current_user) %>
     <%= link_to "SELL", new_product_path %>
-    <%= link_to "MY ORDERS", products_path %>
+    <%= link_to "MY ORDERS", my_orders_path %>
     <% else %>
     <%= link_to "SIGN UP", new_user_registration_path %>
     <%= link_to "LOG IN", new_user_session_path %>

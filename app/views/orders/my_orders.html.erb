@@ -1,0 +1,15 @@
+<h1>My Orders</h1>
+
+<% @orders.each do |order| %>
+<p><% order.id %></p>
+<p><% order.product.user_id %></p><br>
+
+<p><% order.profile.street_address %></p>
+<p><% order.profile.town_suburb %></p>
+<p><% order.profile.city %></p>
+<p><% order.profile.state %></p>
+<p><% order.profile.postcode %></p><br>
+
+<p><% order.product.price %></p>
+
+<% end %>

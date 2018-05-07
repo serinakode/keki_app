@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_one :profile
   has_one :product
+  has_many :orders 
 
   def create_profile 
     Profile.create!([

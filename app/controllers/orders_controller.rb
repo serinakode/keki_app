@@ -21,6 +21,10 @@ class OrdersController < ApplicationController
   def edit
   end
 
+  def my_orders
+  @orders = Order.where(user_id: current_user.id)
+  end
+
   # POST /orders
   # POST /orders.json
   def create
