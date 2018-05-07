@@ -36,10 +36,22 @@ html {
     font-size: 14pt;
 }
 
+.hamburger_icon {
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+}
+
 .nav {
     text-align: right;
     height: 70px;
     line-height: 70px;
+}
+
+.content {    
+text-align: center;
+height: 300px;
+color:#6F6158;
 }
 
 .menu {
@@ -90,9 +102,12 @@ html {
 }
 
 .logo {
+    display: flex;
+    align-self: center;
     max-height: 220px;
-    max-width: 180px;  
-    margin: 50px 10px 20px 730px;
+    max-width: 180px;
+    margin: 30px auto;  
+    /* margin: 50px 10px 20px 730px; */
 }
 
 
@@ -121,52 +136,38 @@ html {
         width: 100%;
         padding: 25px;
         text-align: center;
-        background-color: fuchsia;
+        font-family: "Source Sans Pro";
+        font-size: 14pt;
+        color:#6F6158;
     }
 
-    .address {
+    /* .address {
         text-align: left;
         color:#6F6158;
         background-color: #ffffff;
         text-align: center;
-    }
+    } */
     
-    .input {
+    /* .input {
         border: 5px solid #F3EEE9;
         /* width: 100%; */
-        padding: 10px;
+        /* padding: 10px;
         margin: 5px;
         position: center;
-     }
+     } */ 
 
-     .cake-images {
+     .cake_images {
          display: flex;
          flex-direction: row;
-         justify-content: center;
-         background-color: yellow;
+         justify-content: center; 
          flex-wrap: wrap;
      }
 
 .cake {
         width: 240px;
         height: 350px;
-        /* object-fit: cover;
-        position: center; */
+        object-fit: cover;
+        position: center;
         margin: 15px;
-}
-
-.searchButton {
-    position: center;  
-    /* right: -50px; */
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: yellow;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
+} 
 
