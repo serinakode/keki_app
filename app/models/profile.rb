@@ -6,6 +6,6 @@ class Profile < ApplicationRecord
     after_validation :geocode          # auto-fetch coordinates
 
     def full_street_address
-        "#{address}, #{city}, #{postcode}, #{state}"
+        "#{address}, #{city}, #{state}, #{postcode}"
     end
 end
