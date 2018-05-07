@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'shrine', '~> 2.10', '>= 2.10.1'
+gem 'geocoder', '~> 1.4', '>= 1.4.7'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
