@@ -5,7 +5,12 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name
       t.string :username
-      t.integer :user_address
+      t.string :address
+      t.string :city
+      t.string :state
+      t.string :postcode
+      t.decimal :longitude
+      t.decimal :latitude
       t.text :short_bio
       t.text :image_data
 

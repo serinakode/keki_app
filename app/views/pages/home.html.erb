@@ -10,18 +10,20 @@
 </div> %>
 <div class="head">Order your favourite cake with Keki, delivered </div>
 
-<div class="container">
-  <form>
-  <div class="address">
-    Your address e.g. 120 Spencer St, Melbourne<br>
-    <input class="input">Test text</input>
-    <%= link_to "Products", products_path %>
-  </div>
 
-  <div class="address-options">
-    <radio>radio1</radio> <radio>radio2</radio> <submit></submit>
-  </div>
-  </form>
+<div class="container">
+
+<%= form_with url: products_path, id: 'form-search' do |f| %>
+  <%= f.label 'Your address here', id: 'label-address' %>
+  <%= f.text_field :search_address %>
+<p>
+  <%= f.label :delivery %>
+  <%= f.radio_button :delivery_type, :delivery %>
+  <%= f.label :pickup %>
+  <%= f.radio_button :delivery_type, :pickup %>
+  <%= f.submit :find %>
+  </p>
+<% end %>
 
   <div class="cake_images">
     <div><%= image_tag("landing_cake1.jpg", class: "cake") %></div>

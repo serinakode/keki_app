@@ -50,13 +50,12 @@ ActiveRecord::Schema.define(version: 2018_05_07_020612) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.string "street_address"
-    t.string "town_suburb"
+    t.string "address"
     t.string "city"
     t.string "state"
     t.integer "postcode"
     t.decimal "latitude"
-    t.decimal "logitude"
+    t.decimal "longitude"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

@@ -1,3 +1,20 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// home css
+
+#form-search {
+    padding: 1em;
+    background-color: white;
+    input, label {
+        display: inline-block;
+        // background: red;
+    }
+
+    label #label-address, input[type="text"] {
+        display: block;
+        margin: 0 auto;
+    }
+
+}
