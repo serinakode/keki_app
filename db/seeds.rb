@@ -24,6 +24,7 @@ User.all.each do |user|
     user.profile.street_address = "120 Spencer st" if user.id == 1
     user.profile.street_address = "318 Russell st" if user.id == 2
     user.profile.town_suburb = "Melbourne"
+    user.profile.postcode = "3000"
     user.profile.city = "Melbourne"
     user.profile.state = "Victoria"
 end
