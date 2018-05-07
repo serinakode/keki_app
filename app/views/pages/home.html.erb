@@ -1,16 +1,36 @@
-<div class="head">
+<%# <div class="head">
 <h1>Order your favourite cake with Keki, delivered </h1>
 </div>
 
 <div class="address">
 <h4>Your address e.g. 120 Spencer St, Melbourne</h4>
-</div>
-
+</div> %>
+<%# 
 <div class="boxed">
+</div> %>
+<div class="head">Order your favourite cake with Keki, delivered </div>
+
+<div class="container">
+  <form>
+  <div class="address">
+    Your address e.g. 120 Spencer St, Melbourne<br>
+    <input class="input">Test text</input>
+  </div>
+
+  <div class="address-options">
+    <radio>radio1</radio> <radio>radio2</radio> <submit></submit>
+  </div>
+  </form>
+
+  <div class="cake-images">
+    <div><%= image_tag("landing_cake1.jpg", class: "cake") %></div>
+    <div><%= image_tag("landing_cake2.jpg", class: "cake") %></div>
+    <div><%= image_tag("landing_cake3.jpg", class: "cake") %></div>
+  </div>
+
 </div>
 
-<div class="flex-container">
-  <div><%= image_tag("landing_cake1.jpg", class: "cake") %></div>
-  <div><%= image_tag("landing_cake2.jpg", class: "cake") %></div>
-  <div><%= image_tag("landing_cake3.jpg", class: "cake") %></div>
+
+  
+
 </div>

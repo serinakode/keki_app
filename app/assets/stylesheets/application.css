@@ -32,7 +32,8 @@ html, body {
 }
 
 html {
-    font-family: "Source Sans Pro"
+    font-family: "Source Sans Pro";
+    font-size: 14pt;
 }
 
 .nav {
@@ -99,47 +100,62 @@ html {
     position: relative;
 }
 
-.head {
-    font-family: 'Source Sans Pro';
-    font-size: 17pt;
-    text-align: center;
-    color:#6F6158;
-    margin-top: 60px;
-    position: relative;
-}
 
-.address {
-    font-family: 'Source Sans Pro';
-    font-size: 14pt;
-    text-align: center;
-    color:#6F6158;
-    margin-top: 90px;
-    position: relative;
-}
-
-.boxed {
-    border: 5px solid #F3EEE9;
-    width: 500px;
-    padding: 25px;
-    position: absolute;
-    /* margin-top: 300px; */
-    /* left:350px; */
-    margin: 70px 10px 60px 170px;
-    position: relative;
- }
-
-.cake {
-    width: 240px;
-    height: 350px;
-    object-fit: cover;
-    position: relative;
-    margin: 15px;
-}
-
-.flex-container {
+/* .flex-container {
     display: flex;
     justify-content: center; 
     align-content: center;
     /* position: relative; */
-    margin: 600px 30px 30px 20px 
-  }
+    /* margin: 600px 30px 30px 20px 
+  } */
+
+.flex-container {
+    display: flex; 
+}
+
+    .head {
+        font-family: 'Source Sans Pro';
+        font-size: 17pt;
+        text-align: center;
+        color:#6F6158;
+        margin-top: 60px;
+        position: relative;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 25px;
+        text-align: center;
+        background-color: fuchsia;
+    }
+
+    .address {
+        text-align: left;
+        color:#6F6158;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    
+    .input {
+        border: 5px solid #F3EEE9;
+        /* width: 100%; */
+        padding: 10px;
+        margin: 5px;
+        position: center;
+     }
+
+     .cake-images {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         background-color: yellow;
+         flex-wrap: wrap;
+     }
+
+.cake {
+        width: 240px;
+        height: 350px;
+        /* object-fit: cover;
+        position: center; */
+        margin: 15px;
+}
