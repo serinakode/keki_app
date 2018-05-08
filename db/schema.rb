@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_07_020612) do
+ActiveRecord::Schema.define(version: 2018_05_08_095225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,13 +18,13 @@ ActiveRecord::Schema.define(version: 2018_05_07_020612) do
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "product_id"
-    t.bigint "profile_id"
     t.datetime "delivery_date"
     t.text "delivery_comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "amount"
+    t.integer "stripe_charge_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
-    t.index ["profile_id"], name: "index_orders_on_profile_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(version: 2018_05_07_020612) do
   end
 
   add_foreign_key "orders", "products"
-  add_foreign_key "orders", "profiles"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "users"
   add_foreign_key "profiles", "users"
