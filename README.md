@@ -4,13 +4,15 @@ Hosted at https://sleepy-sierra-76511.herokuapp.com/
 
 ## Table of Contents
 
-- About project
-* What is 'keki'?
-* Problem
-* Solution
+- [About project](#about-project)
+* [What is 'keki'?](#What-is-keki?)
+* [Problem](#Problem)
+* [Solution](#Solution)
 
-- Planning
+- [Planning]
 * User Stories
+    - Version One
+    - Version Two
 * Entity Relationship Diagram
     - Version One
     - Version Two
@@ -33,7 +35,7 @@ Hosted at https://sleepy-sierra-76511.herokuapp.com/
 
 ## What is ‘*keki*’?
 
-![logo](assets/images/Keki.png)
+![logo](app/assets/images/Keki.png)
 
 Keki is an online platform where merchants can showcase their cake artistry, promote their baking skills, connect with potential buyers for their cakes, and improve their reputation. Customers can easily find, buy a cake from a seller easily using keki.
 
@@ -59,7 +61,7 @@ The product can be customisable. They can add/remove ingredients and design as p
 # Planning
 
 ## User Stories
-![User Stories](assets/images/user_stories.png)
+![User Stories](app/assets/images/user_stories.png)
 
 ## Entity Relationship Diagram
 
@@ -74,6 +76,6 @@ The product can be customisable. They can add/remove ingredients and design as p
     - Mobile
     - Desktop
 
-## Challenges
+# Challenges
 
 # Future developments

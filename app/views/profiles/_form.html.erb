@@ -1,4 +1,4 @@
-<%= form_with(model: profile, local: true) do |form| %>
+<%= form_with model: profile, local: true do |form| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -10,51 +10,52 @@
       </ul>
     </div>
   <% end %>
+  <h2>PROFILE: <%= profile.first_name %></h2>
 
  <div class="field">
   <%= form.label :image %>
-  <% form.hidden_field :image, value: @profile.cached_image_data %>
+  <% form.hidden_field :image, value: profile.cached_image_data %>
   <%= form.file_field :image %>
   </div>
 
   <div class="field">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, value: profile.first_name %>
   </div>
 
   <div class="field">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, value: profile.last_name %>
   </div>
 
   <div class="field">
     <%= form.label :username %>
-    <%= form.text_field :username %>
+    <%= form.text_field :username, value: profile.username %>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, value: profile.address %>
   </div>
 
    <div class="field">
     <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, value: profile.city %>
   </div>
 
    <div class="field">
     <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.text_field :state, value: profile.state %>
   </div>
 
  <div class="field">
     <%= form.label :postcode %>
-    <%= form.number_field :postcode %>
+    <%= form.number_field :postcode, value: profile.postcode %>
   </div>
 
   <div class="field">
     <%= form.label :short_bio %>
-    <%= form.text_area :short_bio %>
+    <%= form.text_area :short_bio, value: @profile.short_bio %>
   </div>
 
   <div class="actions">

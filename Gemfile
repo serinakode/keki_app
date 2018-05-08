@@ -6,6 +6,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'shrine', '~> 2.10', '>= 2.10.1'
 gem 'geocoder', '~> 1.4', '>= 1.4.7'
 gem 'pundit', '~> 1.1'
+gem 'stripe', '~> 3.13'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

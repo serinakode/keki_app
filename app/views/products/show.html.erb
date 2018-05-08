@@ -20,14 +20,15 @@
     <% if @product.image_url.nil? %>
     <p> No image uploaded </p>
     <% else %>
-    <%= image_tag @product.image_url, width:"50%" %>
+    <%= image_tag @product.image_url, width: 200 %>
     <% end %>
-
 </p>
- 
-     
-       
 
+<p>
+  <strong>Address:</strong>
+    <%= @product.address %>
+</p>
+  
 <p>
   <strong>Quantity available:</strong>
   <%= @product.quantity_available %>

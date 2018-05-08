@@ -4,12 +4,21 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:street_address].present?
+      @products = Product.cakes_near(params[:street_address], 10, :order => :distance)
+    # if params(street_address)
+    #  @products = Product.search(params)
+    else 
+      # flash.now[:error] = "No results"
+      @products = Product.all
+      # @products = Product.none
+    end 
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    # @products = Product.find(params[:id])
   end
 
   # GET /products/new

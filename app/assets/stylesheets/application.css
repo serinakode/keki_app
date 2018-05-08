@@ -14,9 +14,10 @@
  *= require_self
  */
  
+ 
 
  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-
+ 
 * { 
     box-sizing: border-box;
 }
@@ -110,20 +111,10 @@ color:#6F6158;
     /* margin: 50px 10px 20px 730px; */
 }
 
-
-/* .flex-container {
-    display: flex;
-    justify-content: center; 
-    align-content: center;
-    /* position: relative; */
-    /* margin: 600px 30px 30px 20px 
-  } */
-
-/* .flex-container {
-    display: flex; 
-} */
-
     .head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         font-family: 'Source Sans Pro';
         font-size: 17pt;
         text-align: center;
@@ -170,4 +161,3 @@ color:#6F6158;
         position: center;
         margin: 15px;
 } 
-

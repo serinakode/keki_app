@@ -12,4 +12,4 @@ class Product < ApplicationRecord
 end
 
 
-Add CommentCollap
+# Add CommentCollap

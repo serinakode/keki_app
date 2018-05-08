@@ -23,9 +23,9 @@
     <% @profiles.each do |profile| %>
       <tr>
         <% if profile.image_url.nil? %>
-        <p> No image uploaded <p>
+        <td> No image uploaded <td>
         <% else %>
-        <td><%= image_tag profile.image_url %></td>
+        <td><%= image_tag profile.image_url, width: 100 %></td>
         <% end %>
         <td><%= profile.first_name %></td>
         <td><%= profile.last_name %></td>
@@ -35,7 +35,7 @@
         <td><%= profile.state %></td> 
         <td><%= profile.postcode %></td> 
         <td><%= profile.short_bio %></td>
-        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Show', profile_path(profile.id) %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

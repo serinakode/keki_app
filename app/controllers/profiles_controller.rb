@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     redirect_to :root unless user_signed_in?
-    @profile = current_user.profile  
+    @profile = current_user.profile 
   end
 
   # GET /profiles/new
@@ -70,11 +70,11 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      @profile = Profile.where(user_id: params[:id]).first
+      @profile = Profile.where(user_id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :username, :address, :city, :state, :postcode, :short_bio, :image_data)
+      params.require(:profile).permit(:first_name, :last_name, :username, :address, :city, :state, :postcode, :short_bio, :image)
     end
 end
