@@ -34,14 +34,12 @@
   <%= @product.quantity_available %>
 </p>
 
+
+<%# stripe button %>
+
+
+
 <p>
   <strong>No longer selling:</strong>
   <%= @product.no_longer_selling %>
 </p>
-
-<%# stripe buy button %>
-
-<%= link_to 'Order', order_product_path(@order) %>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

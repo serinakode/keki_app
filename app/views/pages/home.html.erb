@@ -13,7 +13,7 @@
 
 <div class="container">
 
-<%= form_with url: products_path, id: 'form-search' do |f| %>
+<%= form_with url: products_path, method: :get, id: 'form-search' do |f| %>
   <%= f.label 'Your address here', id: 'label-address' %>
   <%= f.text_field :search_address %>
 <p>

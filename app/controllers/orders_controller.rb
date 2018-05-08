@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy, :order, :charge]
 
   # GET /orders
   # GET /orders.json
@@ -22,7 +22,11 @@ class OrdersController < ApplicationController
   end
 
   def my_orders
-  @orders = Order.where(user_id: current_user.id)
+    @orders = Order.where(user: current_user)
+  end
+
+  def orders
+    # find orders that I have to deliver as the seller
   end
 
   # POST /orders

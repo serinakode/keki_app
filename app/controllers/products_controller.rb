@@ -1,11 +1,13 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :charge]
   before_action :authenticate_user!
   # GET /products
   # GET /products.json
   def index
-    if params[:street_address].present?
-      @products = Product.cakes_near(params[:street_address], 10, :order => :distance)
+    if params[:search_address].present?
+      puts "$" * 100
+      @products = Product.cakes_near(params[:search_address])
+      puts @products.count
     # if params(street_address)
     #  @products = Product.search(params)
     else 
@@ -20,6 +22,32 @@ class ProductsController < ApplicationController
   def show
     # @products = Product.find(params[:id])
   end
+
+
+  def charge
+    
+    @order = Order.new
+    @order.user = current_user 
+    @order.product = @product
+    @order.price = @product.price
+
+
+    
+    # stripe charge stuff
+    # customer stripe id if there isn't one
+    # charge 
+    @order.charge_id = charge
+
+    # 
+    
+    if @order.save
+
+    end
+    
+    # redirect to my_orders
+  end
+
+
 
   # GET /products/new
   def new
