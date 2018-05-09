@@ -13,19 +13,22 @@
 
 <%= link_to image_tag("Keki.png", class: "logo"), root_path %>
 
-<body>
 <div class="nav">
   <label for="toggle"><%= image_tag("hamburger.png", class: "hamburger_icon") %><label>
   <input type="checkbox" id="toggle"/>
-  <%# <h2> CURRENT USER Profile: <%= current_user.profile %>
+<body>
   <div class="menu">
     <% if current_user != nil %>
-    ( <%= current_user.profile.first_name %> )
+    <% if current_user.profile.nil?%>
+    <% else %>
+    (<%= current_user.profile.first_name %>)
+    <% end %>
+    <%= link_to "HOME", root_path %>
     <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
     <% if current_user.profile != nil %>
       <%= link_to "PROFILE", edit_profile_path(current_user) %>
     <% else %>
-      <%= link_to "MAKE PROFILE", new_profile_path %>
+      <%= link_to "PROFILE", new_profile_path %>
     <% end %>
     <%= link_to "SELL", new_product_path %>
     <%= link_to "MY ORDERS", my_orders_path %>
@@ -33,7 +36,6 @@
     <%= link_to "SIGN UP", new_user_registration_path %>
     <%= link_to "LOG IN", new_user_session_path %>
     <% end %>
- </div>
  </div>
 
  <div class="content">

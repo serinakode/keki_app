@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # get 'pages/home'
   root 'pages#home'
   get '/my_orders', to: "orders#my_orders"
+  get '/contact_us', to: "pages#contact_us"
 
   
 

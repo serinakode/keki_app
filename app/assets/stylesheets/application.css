@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
- 
- 
 
  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
  
@@ -41,6 +39,7 @@ html {
     padding: 5px;
     width: 70px;
     height: 70px;
+    margin-top: -25px;
 }
 
 .nav {
@@ -56,7 +55,7 @@ color:#6F6158;
 }
 
 .menu {
-    margin: -60px 30px 0 0;
+    margin: -20px 30px 0px 0px;
 }
 
 .menu a {
@@ -82,7 +81,7 @@ color:#6F6158;
 
 @media only screen and (max-width: 500px) {
     label {
-        display: block;
+        display: inline-block;
         cursor: pointer;
     }
     .menu {
@@ -91,12 +90,11 @@ color:#6F6158;
         display: none;
     }
     .menu a {
-        display: block;
-        border-bottom: 1px solid #F3EEE9;
-        margin: 0;
+        display: inline-block;
+        margin: 20px 1px 2px 3px;
     }
     #toggle:checked + .menu {
-        display: block;
+        display: inline-block;
         position: relative;
     }
 
@@ -110,55 +108,4 @@ color:#6F6158;
     margin: 30px auto;  
     /* margin: 50px 10px 20px 730px; */
 }
-
-    .head {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-family: 'Source Sans Pro';
-        font-size: 17pt;
-        text-align: center;
-        color:#6F6158;
-        margin-top: 60px;
-        position: relative;
-    }
-    
-    .container {
-        width: 100%;
-        padding: 25px;
-        text-align: center;
-        font-family: "Source Sans Pro";
-        font-size: 14pt;
-        color:#6F6158;
-    }
-
-    /* .address {
-        text-align: left;
-        color:#6F6158;
-        background-color: #ffffff;
-        text-align: center;
-    } */
-    
-    /* .input {
-        border: 5px solid #F3EEE9;
-        /* width: 100%; */
-        /* padding: 10px;
-        margin: 5px;
-        position: center;
-     } */ 
-
-     .cake_images {
-         display: flex;
-         flex-direction: row;
-         justify-content: center; 
-         flex-wrap: wrap;
-     }
-
-.cake {
-        width: 240px;
-        height: 350px;
-        object-fit: cover;
-        position: center;
-        margin: 15px;
-} 
 

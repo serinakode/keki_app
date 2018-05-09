@@ -24,7 +24,7 @@
         <td><%= product.price %></td>
         <% if product.image_url.nil? %>
         <p> No image uploaded </p>
-        <% else %>
+        <% else 
         <td><%= image_tag product.image_url %></td>
         <% end %>
         <td><%= product.quantity_available %></td>

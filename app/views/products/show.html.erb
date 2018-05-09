@@ -1,47 +1,44 @@
 <p id="notice"><%= notice %></p>
 
+<section>
 <p>
-  <strong>Product name:</strong>
+  <strong>PRODUCT NAME:</strong>
   <%= @product.product_name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>DESCRIPTION:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>PRICE(AUD):</strong>
   <%= @product.price %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <strong>IMAGE:</strong>
     <% if @product.image_url.nil? %>
     <p> No image uploaded </p>
     <% else %>
     <%= image_tag @product.image_url, width: 200 %>
     <% end %>
 </p>
+  <strong>QUANTITY:</strong>
+  <%= @product.quantity_available %><br>
 
 <p>
-  <strong>Address:</strong>
-    <%= @product.address %>
-</p>
-  
-<p>
-  <strong>Quantity available:</strong>
-  <%= @product.quantity_available %>
-</p>
-
-<p>
-  <strong>No longer selling:</strong>
+  <strong>NO LONGER SELLING:</strong>
   <%= @product.no_longer_selling %>
 </p>
 
-<%# stripe buy button %>
+<p>
+<button class="pay_button">BUY NOW</button>
+</p>
+</section>
 
-<%= link_to 'Order', order_product_path(@order) %>
-
+<div class='footer'>
+<%= link_to 'Order', new_order_path(@order) %> |
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</div>

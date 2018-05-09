@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     redirect_to :root unless user_signed_in?
-    @profile = User.find(params[:id]).profile 
+    @profile = Profile.find(params[:id])
     # @profile = current_user.profile 
 
   end
@@ -72,7 +72,7 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      @profile = Profile.where(user_id: params[:id])
+      @profile = Profile.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,0 +1,9 @@
+<div class="contact">CONTACT US ♡ </div>
+
+<%= form_tag contact_us_path, method: :get do %>
+    <p>EMAIL:</p>
+    <%= text_field_tag 'EMAIL', nil, class: "email_box"%> <br>
+    <p>MESSAGE:</p>
+    <%= text_area_tag 'MESSAGE', nil, class: "message_box" %><br>
+     <%= submit_tag 'SEND MESSAGE', class: "submit_button" %>
+   <% end %>
