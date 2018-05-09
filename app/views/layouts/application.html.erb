@@ -25,11 +25,7 @@
     <% end %>
     <%= link_to "HOME", root_path %>
     <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
-    <% if current_user.profile != nil %>
-      <%= link_to "PROFILE", edit_profile_path(current_user) %>
-    <% else %>
-      <%= link_to "PROFILE", new_profile_path %>
-    <% end %>
+    <%= link_to "PROFILE", edit_profile_path(current_user.profile.id) %>
     <%= link_to "SELL", new_product_path %>
     <%= link_to "MY ORDERS", my_orders_path %>
     <% else %>
