@@ -32,10 +32,30 @@
   <%= @product.no_longer_selling %>
 </p>
 
-<p>
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+  </article>
+
+  <%= hidden_field_tag 'amount', @product.price %>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="<%= @product.price %>%"
+          data-locale="auto"></script>
+<% end %>
+
+<%# <p>
 <button class="pay_button">BUY NOW</button>
-</p>
+</p> %>
 </section>
+
+
 
 <div class='footer'>
 <%= link_to 'Order', new_order_path(@order) %> |

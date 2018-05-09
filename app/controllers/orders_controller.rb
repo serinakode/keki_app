@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
   end
 
   def orders
-    # find orders that I have to deliver as the seller
+    @orders = Order.where(user: seller)
   end
 
   # POST /orders

@@ -1,19 +1,19 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.pay_button {
-        background-color: #6F6158;
-        border: none;
-        color: #F3EEE9;
-        padding: 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        border-radius: 5px;
-    }
-    
+
+// .stripe-button {
+//     background-color: #6F6158;
+//     border: none;
+//     color: #F3EEE9;
+//     padding: 20px;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-block;
+//     font-size: 16px;
+//     margin: 4px 2px;
+//     border-radius: 5px;
+// }
 section {
     display: flex;
     flex-direction: column;

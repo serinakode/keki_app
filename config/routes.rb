@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/my_orders', to: "orders#my_orders"
   get '/contact_us', to: "pages#contact_us"
-
   
-
+  resources :charges
   resources :orders
   resources :products do
     member do 

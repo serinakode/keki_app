@@ -21,7 +21,8 @@
     <% if current_user != nil %>
     <% if current_user.profile.nil?%>
     <% else %>
-    (<%= current_user.profile.first_name %>)
+    <div class="name_view">
+    Hi, <%= current_user.profile.first_name %>!</div>
     <% end %>
     <%= link_to "HOME", root_path %>
     <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
