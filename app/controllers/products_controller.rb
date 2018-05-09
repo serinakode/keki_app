@@ -5,15 +5,9 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:search_address].present?
-      puts "$" * 100
       @products = Product.cakes_near(params[:search_address])
-      puts @products.count
-    # if params(street_address)
-    #  @products = Product.search(params)
     else 
-      # flash.now[:error] = "No results"
       @products = Product.all
-      # @products = Product.none
     end 
   end
 
@@ -56,6 +50,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    authorize @product 
   end
 
   # POST /products

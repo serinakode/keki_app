@@ -13,7 +13,7 @@
 <div class="label_address"> Your address e.g. 120 Spencer Street</div>
 
 <div class="container">
-  <%= form_with url: products_path, method: :get, id: 'form-search' do |f| %>
+  <%= form_with url: products_path, method: :get, local: true, id: 'form-search' do |f| %>
   
   <%= f.text_field :search_address, id: 'boxed'%>
 <p>

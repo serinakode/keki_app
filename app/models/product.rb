@@ -9,7 +9,6 @@ class Product < ApplicationRecord
     def self.cakes_near(address)
         # return cakes nearby
         products = Product.joins(:user, user: :profile)
-        puts products.price
         products.near(address)
     end
 end

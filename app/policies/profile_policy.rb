@@ -1,13 +1,8 @@
 class ProfilePolicy < ApplicationPolicy
-  class Scope < Scope
-    def resolve
-      scope
-    end
-  end
 
-def edit?
-  record == user.profile 
-end
+  def edit?
+    record == user.profile 
+  end
 
 #user == current_user 
 #record == what ever you pass it 
