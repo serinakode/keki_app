@@ -40,6 +40,7 @@ html {
     width: 70px;
     height: 70px;
     margin-top: -25px;
+    position: right;
 }
 
 .nav {
@@ -49,9 +50,16 @@ html {
 }
 
 .content {    
+/* display: flex;
+flex-direction: column;
+justify-content: center; */
+/* padding: 10px 20px 10px 0px;
+margin: 0px 10px 0px 0px; */
 text-align: center;
-height: 300px;
+/* height: 100px; */
 color:#6F6158;
+line-height: 35px;
+
 }
 
 .menu {
@@ -88,6 +96,7 @@ color:#6F6158;
         text-align: center;
         width: 100%;
         display: none;
+        /* display: inline-block; */
     }
     .menu a {
         display: inline-block;
@@ -105,7 +114,7 @@ color:#6F6158;
     align-self: center;
     max-height: 220px;
     max-width: 180px;
-    margin: 30px auto;  
+    margin: 40px auto;  
     /* margin: 50px 10px 20px 730px; */
 }
 

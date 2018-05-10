@@ -25,7 +25,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1/edit
   def edit
     authorize @profile 
-    #@profile = Profile.find_or_initialize_by(user: current_user)   
+    # @profile = Profile.find_or_initialize_by(user: current_user)   
   end
 
   # POST /profiles

@@ -24,19 +24,17 @@
 </p>
 
 <p>
-  QUANTITY:
-  <%= @product.quantity_available %>
+  QTY:
+<%= @product.quantity_available %> 
 </p>
 
-<p>
+<%#
   ADDRESS:
-  <%= @product.user.profileaddress %>
-</p>
+  <%= @product.user.profile.address %>
 
-<p>
+<%#
   NO LONGER SELLING:
   <%= @product.no_longer_selling %>
-</p>
 
 
 <%= form_tag charges_path do %>

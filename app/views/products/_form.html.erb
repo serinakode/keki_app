@@ -13,39 +13,39 @@
 
   <div class="field">
     <%= form.label :product_name %>
-    <%= form.text_field :product_name %>
+    <%= form.text_field :product_name, value: product.product_name %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, value: product.description %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price, value: @product.price %>
+    <%= form.number_field :price, value: product.price %>
   </div>
 
   <div class="field">
   <%= form.label :image %>
-  <% form.hidden_field :image, value: @product.cached_image_data %>
+  <% form.hidden_field :image, value: product.cached_image_data %>
   <%= form.file_field :image %>
 
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_area :address, value: @product.user.profile&.address%>
+    <%= form.text_area :address %>
   </div>
 
   <div class="field">
     <%= form.label :quantity_available %>
-    <%= form.number_field :quantity_available %>
+    <%= form.number_field :quantity_available, value: product.quantity_available %>
   </div>
 
   <div class="field">
     <%= form.label :no_longer_selling %>
-    <%= form.datetime_select :no_longer_selling %>
+    <%= form.datetime_select :no_longer_selling, value: product.no_longer_selling %>
   </div>
 
   <div class="actions">
