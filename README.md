@@ -1,12 +1,13 @@
 # Keki
 
+# Hosted at https://sleepy-sierra-76511.herokuapp.com/
+
 https://github.com/crushoncode/keki_app
 
-Hosted at https://sleepy-sierra-76511.herokuapp.com/
 
 ## Table of Contents
 
-[1. About Project](# About-Project)
+[About Project](#About-Project)
 * [What is 'keki'?](##What-is-keki?)
 * [Problem](##The-Problem)
 * [Solution](##The-Solution)
@@ -42,7 +43,7 @@ Hosted at https://sleepy-sierra-76511.herokuapp.com/
 
 [6. Challenges](#Challenges)
 
-[7. What I've learned](#What-I've-learned)
+[7. What I've Learned](#What-I've-Learned)
 
 [8. Future Developments](#Future-Developments)
 
@@ -157,7 +158,7 @@ https://www.figma.com/file/F8Fojc4yfYSTZ2Lrx7kR0NgT/Keki
 - The data models and attributes
 - Working with an API 
 
-# 7. What I've learned
+# 7. What I've Learned
 - Properly use git and branches
 - ERD should not be messy.
 - Colour choice considering what element should be focused more
