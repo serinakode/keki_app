@@ -14,12 +14,25 @@
 //     margin: 4px 2px;
 //     border-radius: 5px;
 // }
-section {
+.cake_container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 30px 50px 40px 50px;
+}
+
+.cake_container > div {
+    margin: auto;
     text-align: center;    
+    line-height: 20px;
+    margin-top: -50px;
+    
+    // margin: 30px;
+    // margin-top: -50px;
+    // text-align: center;
+    // padding: 10px;
+    // font-size: 17pt;
+    // line-height: 25px;
 }
 
 .footer {
@@ -29,4 +42,12 @@ section {
 
 }
 
-    
+.product_head {
+    font-weight: bold;
+    color: #6F6158;
+    margin-top: -45pt;
+    position: center;
+    padding: 50pt;
+    font-size: 20pt;
+    line-height: 30pt;
+}

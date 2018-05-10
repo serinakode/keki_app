@@ -49,6 +49,7 @@
     font-size: 14px;
     padding-top: 20px;
     padding-bottom: 22px;
+    text-align: center;
 }
 
 .head {
@@ -91,6 +92,7 @@
      flex-direction: row;
      justify-content: center; 
      flex-wrap: wrap;
+  
  }
 
 .cake {
@@ -106,7 +108,7 @@
     position: center;
     color:#6F6158;
     margin: auto;
-    font-size: 14pt;
+    font-size: 11pt;
     margin-top: -100px;
     // text-decoration: none;
 }
@@ -116,7 +118,7 @@
     background-color: #ffffff;
     border: 3px solid #F3EEE9;
     position: center;
-    width: 450px;
+    width: 250px;
     height: 35px;
     border-radius: 5px;
 }
@@ -125,7 +127,7 @@
     background-color: #ffffff;
     border: 3px solid #F3EEE9;
     position: center;
-    width: 450px;
+    width: 370px;
     height: 250px;
     border-radius: 5px;
 
@@ -151,4 +153,10 @@
     font-size: 16pt;
     margin-top: 0px;
     margin-bottom: 30px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

@@ -36,6 +36,7 @@
 
       <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
       <%= link_to "PROFILE", edit_profile_path(current_user.profile.id) %>
+      <%= link_to "SHOP", products_path %>
     
       <% if current_user.profile.first_name == nil %>
         <%= link_to "SELL", edit_profile_path(current_user.profile),{ notice: 'You must complete your profile to see your orders.'}  %>

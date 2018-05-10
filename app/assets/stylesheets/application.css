@@ -50,15 +50,10 @@ html {
 }
 
 .content {    
-/* display: flex;
-flex-direction: column;
-justify-content: center; */
-/* padding: 10px 20px 10px 0px;
-margin: 0px 10px 0px 0px; */
 text-align: center;
-/* height: 100px; */
+position: center;
 color:#6F6158;
-line-height: 35px;
+line-height: 30px;
 
 }
 
