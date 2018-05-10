@@ -18,6 +18,8 @@ class ChargesController < ApplicationController
         :description => 'Rails Stripe customer',
         :currency    => 'usd'
       )
+
+
     # if charge 
     # add order to order table 
     # order = Order.new
