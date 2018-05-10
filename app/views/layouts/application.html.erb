@@ -18,24 +18,35 @@
   <input type="checkbox" id="toggle"/>
 <body>
   <div class="menu">
-    <% if current_user != nil %>
-    <% if current_user.profile.nil?%>
-    <% else %>
     <div class="name_view">
-    Hi, <%= current_user.profile.first_name %>!</div>
+    
+    <% if current_user != nil %>
+      Hi, <%= current_user.profile.first_name %>!</div>
     <% end %>
-    <%= link_to "HOME", root_path %>
-    <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
-    <%= link_to "PROFILE", edit_profile_path(current_user.profile.id) %>
-    <% if current_user.profile.nil? %>
-    <%= link_to "SELL", edit_profile_path(current_user.profile.id) %>
+
+    <% unless user_signed_in? %>
+      <%= link_to "HOME", root_path %>
+      <%= link_to "SIGN UP", new_user_registration_path %>
+      <%= link_to "LOG IN", new_user_session_path %>
+
     <% else %>
-    <%= link_to "SELL", new_product_path %>
-    <% end %>
-    <%= link_to "MY ORDERS", my_orders_path %>
-    <% else %>
-    <%= link_to "SIGN UP", new_user_registration_path %>
-    <%= link_to "LOG IN", new_user_session_path %>
+
+      <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
+      <%= link_to "PROFILE", edit_profile_path(current_user.profile.id) %>
+    
+      <% if current_user.profile.first_name == nil %>
+        <%= link_to "SELL", edit_profile_path(current_user.profile),{ notice: 'You must complete your profile to see your orders.'}  %>
+      <% else %>
+        <%= link_to "SELL", new_product_path %>
+      <% end %>
+    
+      <% if current_user.profile.first_name == nil %>
+      <%= link_to "MY ORDERS", edit_profile_path(current_user.profile) %>
+      <% else %>
+      <%= link_to "MY ORDERS", orders_path, { notice: 'You must complete your profile to see your orders.'} %>
+      <% end %>
+    
+
     <% end %>
  </div>
 
