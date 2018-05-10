@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -27,7 +27,11 @@
     <%= link_to "HOME", root_path %>
     <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
     <%= link_to "PROFILE", edit_profile_path(current_user.profile.id) %>
+    <% if current_user.profile.nil? %>
+    <%= link_to "SELL", edit_profile_path(current_user.profile.id) %>
+    <% else %>
     <%= link_to "SELL", new_product_path %>
+    <% end %>
     <%= link_to "MY ORDERS", my_orders_path %>
     <% else %>
     <%= link_to "SIGN UP", new_user_registration_path %>

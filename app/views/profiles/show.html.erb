@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <p>
-  <strong>Image:</strong>
     <% if @profile.image_url.nil? %>
     <p> No image uploaded </p>
     <% else %>
@@ -9,15 +11,7 @@
     <% end %>
 </p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
+  <strong><h2><%= @profile.first_name %> <%= @profile.last_name %></h2></strong>
 
 <p>
   <strong>Username:</strong>
@@ -45,7 +39,6 @@
 </p>
 
 <p>
-  <strong>Short bio:</strong>
   <%= @profile.short_bio %>
 </p>
 

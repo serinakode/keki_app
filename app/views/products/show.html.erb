@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <section>
 <p>
     <% if @product.image_url.nil? %>
     <p> No image uploaded </p>
     <% else %>
-    <%= image_tag @product.image_url, width: 200 %>
+    <%= image_tag @product.image_url, width: 250 %>
     <% end %>
 </p>
 
-<p>
-  <strong><%= @product.product_name %></strong>
-</p>
+  <strong><h2><%= @product.product_name %></h2></strong>
 
 <p>
   <%= @product.description %>
@@ -19,8 +20,9 @@
 
 <p>
   PRICE(AUD):
-  <%= @product.price %> <br>
+  $<%= @product.price %> <br>
 </p>
+
 <p>
   QUANTITY:
   <%= @product.quantity_available %>
@@ -29,6 +31,8 @@
 <p>
   ADDRESS:
   <%= @product.user.profile.address %>
+</p>
+
 <p>
   NO LONGER SELLING:
   <%= @product.no_longer_selling %>
