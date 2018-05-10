@@ -2,35 +2,38 @@
 
 <section>
 <p>
-  <strong>PRODUCT NAME:</strong>
-  <%= @product.product_name %>
-</p>
-
-<p>
-  <strong>DESCRIPTION:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>PRICE(AUD):</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>IMAGE:</strong>
     <% if @product.image_url.nil? %>
     <p> No image uploaded </p>
     <% else %>
     <%= image_tag @product.image_url, width: 200 %>
     <% end %>
 </p>
-  <strong>QUANTITY:</strong>
-  <%= @product.quantity_available %><br>
 
 <p>
-  <strong>NO LONGER SELLING:</strong>
+  <strong><%= @product.product_name %></strong>
+</p>
+
+<p>
+  <%= @product.description %>
+</p>
+
+<p>
+  PRICE(AUD):
+  <%= @product.price %> <br>
+</p>
+<p>
+  QUANTITY:
+  <%= @product.quantity_available %>
+</p>
+
+<p>
+  ADDRESS:
+  <%= @product.user.profile.address %>
+<p>
+  NO LONGER SELLING:
   <%= @product.no_longer_selling %>
 </p>
+
 
 <%= form_tag charges_path do %>
   <article>
