@@ -7,7 +7,7 @@ https://github.com/crushoncode/keki_app
 
 ## Table of Contents
 
-[About Project](#About-Project)
+[1. About Project](#About-Project)
 * [What is 'keki'?](##What-is-keki?)
 * [Problem](##The-Problem)
 * [Solution](##The-Solution)
