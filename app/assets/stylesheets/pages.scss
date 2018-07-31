@@ -5,71 +5,70 @@
 // home css
 
 #form-search {
-    padding: 1em;
-    background-color: white;
-    input {
-        border: 3px solid #F3EEE9;
-        border-radius: 5px;
-    } 
+  padding: 1em;
+  background-color: white;
+  input {
+    border: 3px solid #f3eee9;
+    border-radius: 5px;
+  }
 
-    #boxed {
-        width: 300px;
-        height: 37px;
-        margin-top: -20px;
-    }
-    
-    label {
-        display: inline-block;
-        color:#6F6158;
-        font-size: 15px;
-        font-weight: normal;
-    }
+  #boxed {
+    width: 300px;
+    height: 37px;
+    margin-top: -20px;
+  }
 
-    #search {
-        display: inline-block;
-        color:#6F6158;
-        background-color: #F3EEE9;
-        font-size: 15px;
-        font-weight: normal;
-        margin: auto 4px 20px 10px
-    }
+  label {
+    display: inline-block;
+    color: #6f6158;
+    font-size: 15px;
+    font-weight: normal;
+  }
 
-    input[type="text"] {
-        display: block;
-        margin: 0 auto;
-        font-weight: lighter;
-        color:#6F6158;        
-    }
+  #search {
+    display: inline-block;
+    color: #6f6158;
+    background-color: #f3eee9;
+    font-size: 15px;
+    font-weight: normal;
+    margin: auto 4px 20px 10px;
+  }
 
-} 
+  input[type='text'] {
+    display: block;
+    margin: 0 auto;
+    font-weight: lighter;
+    color: #6f6158;
+  }
+}
 
 .label_address {
-    color:#6F6158;
-    font-weight: lighter;
-    font-size: 14px;
-    padding-top: 20px;
-    padding-bottom: 22px;
-    text-align: center;
+  color: #6f6158;
+  font-weight: lighter;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  text-align: center;
 }
 
 .head {
-    font-family: 'Source Sans Pro';
-    font-size: 16pt;
-    text-align: center;
-    line-height: 36pt;
-    color:#6F6158;
-    margin-top: 20px;
-    position: relative;
+  font-family: 'Source Sans Pro';
+  font-size: 16pt;
+  text-align: center;
+  line-height: 36pt;
+  color: #6f6158;
+  margin-top: 20px;
+  position: relative;
 }
 
 .container {
-    width: 100%;
-    padding: 25px;
-    margin-top: -50px;
-    text-align: center;
-    font-family: "Source Sans Pro";
-    font-size: 14pt;
-    color:#6F6158;
+  width: 100%;
+  padding: 25px;
+  margin-top: -50px;
+  text-align: center;
+  font-family: 'Source Sans Pro';
+  font-size: 14pt;
+  color: #6f6158;
 }
 
 /* .address {
@@ -82,81 +81,78 @@
 /* .input {
     border: 5px solid #F3EEE9;
     /* width: 100%; */
-    /* padding: 10px;
+/* padding: 10px;
     margin: 5px;
     position: center;
- } */ 
+ } */
 
- .cake_images {
-     display: flex;
-     flex-direction: row;
-     justify-content: center; 
-     flex-wrap: wrap;
-  
- }
-
-.cake {
-    width: 200px;
-    height: 290px;
-    object-fit: cover;
-    position: center;
-    margin: 15px;
-    border-radius: 20px;
-} 
-
-.footer {
-    position: center;
-    color:#6F6158;
-    margin: auto;
-    font-size: 11pt;
-    margin-top: -100px;
-    // text-decoration: none;
+.cake_images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+.cake {
+  width: 200px;
+  height: 290px;
+  object-fit: cover;
+  position: center;
+  margin: 15px;
+  border-radius: 20px;
+}
+
+.footer {
+  position: center;
+  color: #6f6158;
+  margin: auto;
+  font-size: 11pt;
+  margin-top: -100px;
+  // text-decoration: none;
+}
 
 .email_box {
-    background-color: #ffffff;
-    border: 3px solid #F3EEE9;
-    position: center;
-    width: 250px;
-    height: 35px;
-    border-radius: 5px;
+  background-color: #ffffff;
+  border: 3px solid #f3eee9;
+  position: center;
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
 }
 
 .message_box {
-    background-color: #ffffff;
-    border: 3px solid #F3EEE9;
-    position: center;
-    width: 370px;
-    height: 250px;
-    border-radius: 5px;
-
+  background-color: #ffffff;
+  border: 3px solid #f3eee9;
+  position: center;
+  width: 370px;
+  height: 250px;
+  border-radius: 5px;
 }
 
 .submit_button {
-    background-color: #6F6158;
-    border: none;
-    color: #F3EEE9;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 5px;
+  background-color: #6f6158;
+  border: none;
+  color: #f3eee9;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
 }
 
 .contact {
-    position: center;
-    color:#6F6158;
-    margin: auto;
-    font-size: 16pt;
-    margin-top: 0px;
-    margin-bottom: 30px;
+  position: center;
+  color: #6f6158;
+  margin: auto;
+  font-size: 16pt;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 
 .section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
