@@ -19,12 +19,6 @@ class ChargesController < ApplicationController
         :currency    => 'usd'
       )
 
-
-    # if charge 
-    # add order to order table 
-    # order = Order.new
-    #  @order = Order.new(order_params)
-
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
