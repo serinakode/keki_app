@@ -25,11 +25,6 @@ class ProductsController < ApplicationController
     @order.product = @product
     @order.price = @product.price
 
-
-    
-    # stripe charge stuff
-    # customer stripe id if there isn't one
-    # charge 
     @order.charge_id = charge
 
     # 
@@ -102,6 +97,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:product_name, :description, :price, :image, :quantity_available, :no_longer_selling)
+      params.require(:product).permit(:product_name, :description, :address, :price, :image, :quantity_available, :no_longer_selling)
     end
 end
