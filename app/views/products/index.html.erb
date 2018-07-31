@@ -9,31 +9,30 @@
     <div class="cake_container">
     <% @products.each do |product| %>
         <p>
-        <div>
-        <% if product.image_url.nil? %>
-        <p> No image uploaded </p>
-        <% else %>
-        <%= image_tag product.image_url, width: 250, :class => "cake" %>
-        <% end %>
-        </div> 
-        
+            <div>
+                <% if product.image_url.nil? %>
+                <p> No image uploaded </p>
+                <% else %>
+                <%= image_tag product.image_url, width: 250, :class => "cake" %>
+                <% end %>
+            </div> 
         </p>
+
         <p>
-        <div>
-        <strong><h2><%= product.product_name %></h2></strong>
-        <%= product.description %>
-        <p>
-        $<%= product.price %>
-        </p>
-        <%# <%= product.quantity_available %>
-        <%# <%= product.no_longer_selling %>
+            <div>
+                <strong><h2><%= product.product_name %></h2></strong>
+                <%= product.description %>
+            <p>
+                $<%= product.price %>
+            </p>
+            <%= product.quantity_available %>
         
-        <p>
-        <%= link_to 'ORDER', product%>
+            <p>
+                <%= link_to 'ORDER', product %>
         <%# <%= link_to 'Edit', edit_product_path(product) %>
         <%# <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </p>
-        </div>
+            </p>
+            </div>
         </p>
     <% end %>
 
