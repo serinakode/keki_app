@@ -4,7 +4,8 @@ class Product < ApplicationRecord
 
     has_many :orders
 
-    reverse_geocoded_by "profiles.latitude", "profiles.longitude"
+    geocoded_by :address
+    after_validation :geocode
 
     def self.cakes_near(address)
         # return cakes nearby
