@@ -2,52 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .stripe-button {
-//     background-color: #6F6158;
-//     border: none;
-//     color: #F3EEE9;
-//     padding: 20px;
-//     text-align: center;
-//     text-decoration: none;
-//     display: inline-block;
-//     font-size: 16px;
-//     margin: 4px 2px;
-//     border-radius: 5px;
-// }
 .cake_container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cake_container > div {
-    margin: auto;
-    text-align: center;    
-    line-height: 20px;
-    margin-top: -50px;
-    
-    // margin: 30px;
-    // margin-top: -50px;
-    // text-align: center;
-    // padding: 10px;
-    // font-size: 17pt;
-    // line-height: 25px;
+  margin: auto;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 50px;
 }
 
 .footer {
-    display: inline-block;
-    margin-bottom: 50px;
-    position: center;
-
+  display: inline-block;
+  margin-bottom: 50px;
+  position: center;
 }
 
 .product_head {
-    font-weight: bold;
-    color: #6F6158;
-    margin-top: -45pt;
-    position: center;
-    padding: 50pt;
-    font-size: 20pt;
-    line-height: 30pt;
+  font-weight: bold;
+  color: #6f6158;
+  margin-top: -45pt;
+  position: center;
+  padding: 50pt;
+  font-size: 20pt;
+  line-height: 30pt;
 }
