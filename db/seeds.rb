@@ -8,12 +8,12 @@
 
 users = [
     {
-    email: 'example1@example.com',
+    email: 'example@example.com',
     password: 'greeneggs'
     },
     {
-    email: 'example2@example.com',
-    password: 'greeneggs'    
+    email: '123@123.com',
+    password: '123456'    
     }
 ]
 
@@ -32,28 +32,28 @@ end
 
 products = [
     {
-        product_name: "little princess",
-        description: "yummy cake",
-        price: 4000,
-        user: User.first
+        product_name: "Flower Mystery",
+        description: "Cream • Fruit • Chocolate • Cheese • Chip",
+        price: 180,
+        quantity_available: 1,
+        user: User.first,
+        address: "120 spencer street, Melbourne"
     },
     {
-        product_name: "chocolate cake",
-        description: "yummy cake",
-        price: 4000,
-        user: User.first
+        product_name: "Little Princess",
+        description: "Chocolate • Honey • Cream • Cheese • Candy",
+        price: 100,
+        quantity_available: 1,
+        user: User.first,
+        address: '120 spencer street, Melbourne'
     },
     {
-        product_name: "new york cheese cake",
-        description: "yummy cake",
-        price: 4000,
-        user: User.first
-    },
-    {
-        product_name: "black forest",
-        description: "yummy cake",
-        price: 4000,
-        user: User.first
+        product_name: "57 & Naked",
+        description: "Mousse • Flower • Candy • Cream chease • Icing",
+        price: 140,
+        quantity_available: 1,
+        user: User.first,
+        address: '120 spencer street, Melbourne'
     }
 ]
 
