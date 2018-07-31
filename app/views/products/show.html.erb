@@ -5,11 +5,11 @@
 
 <section>
 <p>
-    <% if @product.image_url.nil? %>
+    <% if @product.image_url.nil? %> 
     <p> No image uploaded </p>
-    <% else %>
-    <%= image_tag @product.image_url, width: 250 %>
-    <% end %>
+    <% else  %>
+     <%= image_tag @product.image_url, width: 250 %> 
+    <% end %> 
 </p>
 
   <strong><h2><%= @product.product_name %></h2></strong>
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-  QTY:
+  QTY: 
 <%= @product.quantity_available %> 
 </p>
 
@@ -55,9 +55,6 @@
           data-locale="auto"></script>
 <% end %>
 
-<%# <p>
-<button class="pay_button">BUY NOW</button>
-</p> %>
 </section>
 
 
