@@ -34,7 +34,7 @@
 
       <% else %>
 
-      <%= link_to "LOG OUT", destroy_user_session_path, :method => :delete %>
+      <%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %>
       <%= link_to "PROFILE", edit_profile_path(current_user.profile.id) %>
       <%= link_to "SHOP", products_path %>
     
